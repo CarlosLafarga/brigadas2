@@ -32,42 +32,33 @@
                     success: function(data){
                     var obj = JSON.parse(data);
                     //console.log(obj.renglon[0].clave);
-                    console.log(obj);
+
                     var renglones = Object.keys(obj.renglon).length;
 
-                    if(renglones > 1){
+
 
 
                        $("#resultado").empty();
-                       $("#resultado").html('<div class="row"><div class="col-md-12"><div class="ibox"><div class="ibox-title"><span lass="pull-right"></span><h5>Escuelas </h5></div><div class="ibox-content"><div class="table-responsive"><table  id="escuelas" class="table table-striped table-bordered table-hover dataTables-example"><thead><tr><th>Clave CT</th><th>Nombre Escuela</th><th>Domicilio</th><th>Nivel</th><th>Acciones</th></tr></thead></table></div></div></div></div></div>');
-                       listar(data);
-                    }
+
+                       $("#resultado").append('<table class="table table-bordered"><thead><tr><th>Clave</th><th>Escuela</th><th>Domicioio</th><th>Nivel</th></tr></thead><tbody id="body">');
+                       for (var i = 0;   i < renglones; i++) {
+
+                        console.log(obj.renglon[i].clave);
+
+                        $("#body").append("<tr><td>"+obj.renglon[i].clave+"</td><td>"+obj.renglon[i].nombrecct+"</td><td>"+obj.renglon[i].domicilio+"</td><td>"+obj.renglon[i].snivel+"</td></tr>");
+
+                       }
+
+
+                       $("#resultado").append("</tbody></table>");
+
 
                     }
               });
 
             });
 
-            var listar = function(data){
 
-
-            var table = $("#escuelas").DataTable({
-                "destroy":true,
-                "ajax":{data},
-                "columns":[
-                    {"renglon":"clave"},
-                    {"renglon":"nombrecct"},
-                    {"renglon":"domicilio"},
-                    {"renglon":"snivel"},
-                    {"defaultContent": " <button type='button' class='agregar btn-sm btn-primary'>Consultar</button>"}
-
-                ]
-            });
-
-
-            //agregar_venta("#productos",table);
-
-        }
 
 
 

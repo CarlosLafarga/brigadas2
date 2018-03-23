@@ -53,7 +53,9 @@ if ($usuario == false) {
 
 
 
-                <div id="resultado"  class="col-md-9"></div>
+                <div id="resultado"  class="col-md-9">
+
+                </div>
 
 
 

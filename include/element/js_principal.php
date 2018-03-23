@@ -83,4 +83,5 @@
 
     <script src="<?PHP $_SERVER['DOCUMENT_ROOT']?>/brigadas2/include/js/plugins/tinycon/tinycon.min.js"></script>
     <script src="<?PHP $_SERVER['DOCUMENT_ROOT']?>/brigadas2/include/js/plugins/dataTables/datatables.min.js"></script>
+    <script src="<?PHP $_SERVER['DOCUMENT_ROOT']?>/brigadas2/include/js/createtable.js"></script>
 
