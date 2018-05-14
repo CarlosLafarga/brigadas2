@@ -1,39 +1,24 @@
-<?php
-require_once '../conexion/conect.php';
-$buscar = $_POST['b'];
+<?PHP
+include "../conexion/conect.php";
+$cn = Conectarse();
 
-if (!empty($buscar)) {
+$select = "SELECT * FROM vista_ct";
+$result = mysql_query($select, $cn);
 
-    buscar($buscar);
-}
+if (!$result) {
 
-function buscar($b)
-{
-    $cn  = Conectarse();
-    $sql = mysql_query("SELECT * FROM vista_ct WHERE clave LIKE '%" . $b . "%'", $cn);
+    die(mysql_error());
 
-    $contar          = mysql_num_rows($sql);
-    $row             = mysql_fetch_array($sql);
-    $data            = array();
-    $data['renglon'] = $row;
+} else {
+    $arreglo["data"] = [];
+    while ($data = mysql_fetch_assoc($result)) {
 
-    if ($contar == 0) {
+        $arreglo["data"][] = $data;
 
-        echo "0";
-
-    } elseif ($contar == 1) {
-
-        $arreglo["renglon"][] = $row;
-        echo json_encode($arreglo);
-
-    } elseif ($contar > 1) {
-
-        $arreglo["renglon"] = [];
-        while ($data = mysql_fetch_assoc($sql)) {
-
-            $arreglo["renglon"][] = $data;
-
-        }
-        echo json_encode($arreglo);
     }
+    echo json_encode($arreglo);
+
 }
+
+mysql_free_result($result);
+mysql_close($cn);

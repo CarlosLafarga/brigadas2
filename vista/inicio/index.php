@@ -27,34 +27,36 @@ if ($usuario == false) {
       <div class="wrapper wrapper-content">
           <div class="container">
 
-               <div class="col-md-3">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <span class="label label-primary pull-right"><?php echo date('m/d/Y'); ?></span>
-                            <h5>Buscar CT</h5>
-                        </div>
-                        <div class="ibox-content">
 
-                            <div class="row">
-                              <div class="col-md-12">
-                              <label>Clave CT</label>
-                              <input type="text" name="clavecct" id="clavecct" class="form-control" style="text-transform:uppercase;">
-                              <br>
-                              </div>
-                              <div class="col-md-5">
-                              <button type="button" id="buscar" class="btn btn-primary">Consultar</button>
-                              </div>
+
+
+
+                <div id="resultado"  class="col-md-12">
+                   <div class="ibox">
+                            <div class="ibox-title">
+                                <span class="pull-right label label-primary"><?php echo date('m/d/Y'); ?></span>
+                                <h5>Escuelas</h5>
                             </div>
+                            <div class="ibox-content">
+                                <div class="table-responsive">
+                                <table  id="escuelas" class="table table-striped table-bordered table-hover dataTables-example">
+                                <thead>
+                                  <tr>
+                                    <th>ID</th>
+                                    <th>CLAVE</th>
+                                    <th>NOMBRECT</th>
+                                    <th>DOMICILIO</th>
+                                    <th>NIVEL</th>
+                                    <th>ACCIONES</th>
+                                  </tr>
+                                </thead>
+
+                            </table>
 
 
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div id="resultado"  class="col-md-9">
-
+                            </div>
+                            </div>
+                      </div>
                 </div>
 
 
@@ -80,5 +82,6 @@ if ($usuario == false) {
 
 <?PHP include "../../include/element/js_principal.php";?>
 <?PHP include "../../include/element/js_buscarescuela.php";?>
+
 
 </html>
