@@ -24,48 +24,35 @@ if ($usuario == false) {
           <?PHP include "../../include/element/menu.php";?>
 
 
-      <div class="wrapper wrapper-content">
-          <div class="container">
-
-
-
-
-
-                <div id="resultado"  class="col-md-12">
-                   <div class="ibox">
-                            <div class="ibox-title">
-                                <span class="pull-right label label-primary"><?php echo date('m/d/Y'); ?></span>
-                                <h5>Escuelas</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <div class="table-responsive">
-                                <table  id="escuelas" class="table table-striped table-bordered table-hover dataTables-example">
-                                <thead>
-                                  <tr>
-                                    <th>ID</th>
-                                    <th>CLAVE</th>
-                                    <th>NOMBRECT</th>
-                                    <th>DOMICILIO</th>
-                                    <th>NIVEL</th>
-                                    <th>ACCIONES</th>
-                                  </tr>
-                                </thead>
-
-                            </table>
-
+          <div class="wrapper wrapper-content">
+              <div class="container">
+                  <div class="col-lg-4">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Buscar Escuela</h5>
+                            <div class="ibox-tools">
 
                             </div>
-                            </div>
-                      </div>
+                        </div>
+                        <div class="ibox-content">
+                              <form class="form-horizontal">
+                                <div class="form-group">
+                                   <label class="col-lg-2 control-label">Clave:</label>
+                                    <div class="col-lg-10"><input type="text"  placeholder="Clave del centro trabajo" class="form-control">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-lg-offset-2 col-lg-10">
+                                        <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i>&nbsp;Buscar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
-
-
-
-
-
-
-          </div>
+              </div>
           </div>
 
 

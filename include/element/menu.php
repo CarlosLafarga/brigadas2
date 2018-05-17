@@ -13,7 +13,7 @@
                 <li class="dropdown">
                 <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Inicio <span class="caret"></span></a>
                 <ul role="menu" class="dropdown-menu">
-                <li><a href="almacen.php"><i class="fa fa-cubes"></i>&nbsp;&nbsp;Buscar</a></li>
+                <li><a href="<?PHP $_SERVER['DOCUMENT_ROOT']?>/brigadas2/vista/inicio"><i class="fa fa-search"></i>&nbsp;&nbsp;Buscar Escuela</a></li>
                 </ul>
                 </li>
                 <!--fin pagina principal-->
@@ -21,7 +21,8 @@
                 <li class="dropdown">
                 <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Reportes AM <span class="caret"></span></a>
                 <ul role="menu" class="dropdown-menu">
-                <li><a href="almacen.php"><i class="fa fa-cubes"></i>&nbsp;&nbsp;Lista  Reportes</a></li>
+                <li><a href="almacen.php"><i class="fa fa-plus"></i>&nbsp;&nbsp;Crear Reporte</a></li>
+                <li><a href="almacen.php"><i class="fa fa-list"></i>&nbsp;&nbsp;Lista  Reportes</a></li>
                 </ul>
                 </li>
                 <!-- fin reportes-->
